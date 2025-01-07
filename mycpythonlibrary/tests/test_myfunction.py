@@ -1,8 +1,8 @@
-# uczulam na mypythonlibrary i mylib, patrz jak to jest w katalogu
-from mypythonlibrary.python import mylib
+import pytest
+from mycpythonlib import haversine
 
 def test_haversine():
     # Amsterdam to Berlin
-    assert mylib.haversine(
+    assert pytest.approx(haversine(
         4.895168, 52.370216, 13.404954, 52.520008
-    ) == 576.6625818456291
+    )) == 576.6625818456291

@@ -1,12 +1,12 @@
 #include <pybind11/pybind11.h>
-#include "haversine.hpp"
+#include "mycpythonlib/haversine.hpp"
 
 namespace py = pybind11;
+using namespace mycpythonlib;
 
 PYBIND11_MODULE(core, m) {
-    m.doc() = "Moduł C++ do obliczania odległości Haversine"; 
-    
-    m.def("haversine", &mypythonlib::haversine, 
+    m.doc() = "Moduł Python zawierający funkcję haversine";
+    m.def("haversine", &haversine, 
           "Oblicza odległość między dwoma punktami na Ziemi",
           py::arg("lon1"), py::arg("lat1"), 
           py::arg("lon2"), py::arg("lat2"));

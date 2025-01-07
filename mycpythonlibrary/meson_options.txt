@@ -1,0 +1,2 @@
+option('python_version', type : 'string', value : '3', description : 'Python version to use')
+option('build_tests', type : 'boolean', value : true, description : 'Build tests') 
